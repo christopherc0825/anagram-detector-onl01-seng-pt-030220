@@ -6,4 +6,10 @@ class Anagram
     @word = word
   end
 
+  def match(matches)
+    matches.select do |w|
+      w.split.sort == @word.split.sort
+    end
+  end
+  
 end
